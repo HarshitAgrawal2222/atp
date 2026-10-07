@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body { margin: 0; font-family: 'IBM Plex Sans', system-ui, sans-serif; -webkit-font-smoothing: antialiased; background: #f6f7f9; color: #0f172a; }
+:focus-visible { outline: 2px solid #1d4ed8; outline-offset: 2px; }
+html.dark { color-scheme: dark; }
+html.dark body { background: #0b1220; color: #e2e8f0; }
+.compact td { padding-top: .375rem; padding-bottom: .375rem; }
+@layer components {
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-md border border-slate-300 bg-white px-3.5 py-2 text-sm font-medium text-slate-800 hover:bg-slate-50 disabled:opacity-40 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-700; }
+  .btn-primary { @apply border-ink bg-ink text-white hover:bg-slate-800 dark:border-accent dark:bg-accent dark:hover:bg-blue-600; }
+  .field { @apply w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm dark:border-slate-600 dark:bg-slate-900 dark:text-slate-100; }
+}
